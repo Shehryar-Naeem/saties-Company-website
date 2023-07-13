@@ -1,110 +1,139 @@
 #team {
-    padding: 3rem 0 6rem;
+  padding: 3rem 0 6rem;
 }
 
 .title_headling {
-    text-align: center;
-    max-width: 50rem;
-    margin: auto;
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
 
-    & h3 {
-        font-size: 2.5rem;
-        line-height: 3.214rem;
-        font-weight: 700;
-        color: var(--white-color);
-        margin-bottom: 0;
+  & h3 {
+    font-size: 2.5rem;
+    line-height: 3.214rem;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 0;
 
-        @media (max-width:767px) {
-            font-size:1.8rem;
-            line-height:2.8rem;
-        }
+    @media (max-width: 767px) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
     }
+  }
 
-    & p {
-        font-size: 1.214rem;
-        line-height: 2rem;
-        color: var(--font-color);  
-    }
+  & p {
+    font-size: 1.214rem;
+    line-height: 2rem;
+    color: var(--font-color);
+  }
 }
-
 
 .shop .slick-arrow.slick-prev,
-.shop .slick-arrow.slick-next{
-    background: green;
-    width: 5rem;
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.shop .slick-arrow.slick-next {
+  background: green;
+  width: 5rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slick-prev::before,
-.slick-next::before{
-    display: none;
+.slick-next::before {
+  display: none;
 }
-.slick-prev{
-    left: 0;
-    z-index: 1;
+.slick-prev {
+  left: 0;
+  z-index: 1;
 }
-.slick-next{
-    right: 0;
-}
-
-.slide{
-        margin: 0 1rem;
-        padding:0.5rem 1rem; 
-        border: 1px solid #fff;
-        text-align: center;
-}
-.slide >.images{
-    position: relative;
-    overflow: hidden;
-    
-    
-}
-.slide >.images > .icons{
-    width: 100%;
-    position: absolute;
-    bottom: 2rem;
-    z-index: 10;
-    left: 0;
-    text-align: center;
-    transform: translateY(7rem);
-    transition: 0.3s;
-    
-}
-.slide >.images:hover .icons{
-        
-    transform: translateY(0);
+.slick-next {
+  right: 0;
 }
 
-.slide >.images > .icons a{
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
-    padding: 1rem;
-    font-size: 1.7rem;
-    color: white;
-    background: black;
-    margin: 0 0.2rem;
-   
+.slide {
+  margin: 5rem 1rem 0 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  text-align: center;
 }
-.slide >.images > .icons a:hover{
-    background: green;
+.slide > .images {
+  position: relative;
+  overflow: hidden;
 }
-.slide > .content{
-    padding: 1rem 0;
-    
+.slide > .images > .icons {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  z-index: 10;
+  left: 0;
+  text-align: center;
+  transform: translateY(7rem);
+  transition: 0.3s;
 }
-.slide > .content > h3{
-    font-size: 2rem;
-    color: black;
+.slide > .images:hover .icons {
+  transform: translateY(0);
 }
-.slide > .content >p{
-    padding: 0.5rem 0;
-    font-size: 2rem;
-    color: green;
+
+.slide > .images > .icons a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: white;
+  background: black;
+  margin: 0 0.2rem;
 }
-.slide > .content > .stars{
+.slide > .images > .icons a:hover {
+  background: green;
+}
+.slide > .content {
+  padding: 1rem 0;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.slide > .content > h3 {
+  font-size: 2rem;
+  color: black;
+}
+.slide > .content > p {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: var(--font-color);
+}
+.slide > .content > .stars {
+  font-size: 1.2rem;
+  color: black;
+}
+.img_container {
+  width: 100%;
+  height: 20rem;
+}
+.img_container > .size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1090px) {
+  .img_container {
+    height: 15rem;
+  }
+  .slide > .images > .icons a {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1rem;
+  }
+  .slide > .content > h3 {
+    font-weight: 300;
     font-size: 1.2rem;
-    color: black;
+  }
+  .slide > .content > p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .img_container {
+    height: 13rem;
+  }
+  
 }

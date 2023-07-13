@@ -11,24 +11,54 @@ import "slick-carousel/slick/slick-theme.css";
 const Clients = () => {
 
   const set={
-    slidesToShow:4,
+    slidesToShow:5,
     centerMode:false,
     responsive:[
-        {
-            breakpoint:556,
-            settings:{
-                slidesToShow:1,
-                centerMode:false
-            }
-        },
-        {
-            breakpoint:768,
-            settings:{
-                slidesToShow:2,
-                centerMode:false
-            }
+      {
+        breakpoint:556,
+        settings:{
+          slidesToShow:1,
+          centerMode:false
         }
+      },
+      {
+        breakpoint:768,
+        settings:{
+          slidesToShow:2,
+          centerMode:false
+        }
+      },
+      {
+        breakpoint:991,
+        settings:{
+          slidesToShow:3,
+          centerMode:false
+        }
+      },
+      {
+        breakpoint:1200,
+        settings:{
+          slidesToShow:4,
+          centerMode:false
+        }
+      }
     ]
+    // responsive:[
+    //     {
+    //         breakpoint:556,
+    //         settings:{
+    //             slidesToShow:1,
+    //             centerMode:false
+    //         }
+    //     },
+    //     {
+    //         breakpoint:768,
+    //         settings:{
+    //             slidesToShow:2,
+    //             centerMode:false
+    //         }
+    //     }
+    // ]
 }
 
 
@@ -49,15 +79,14 @@ const Clients = () => {
             return (
               <>
                 <div key={index} style={{display:"flex", justifyContent:"space-evenly", margin: "0 1rem"}} >
+                  <div className='image_container'>
+                    
                   <img
                     src={cur}
-                    style={{
-                      width: "20rem",
-                      height: "20rem",
-                      objectFit: "fill",
-                      borderRadius:"50%"
-                    }}
+                    className='size'
                   />
+                  </div>
+
                 </div>
               </>
             );

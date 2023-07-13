@@ -26,84 +26,24 @@
         color: var(--font-color);  
     }
 }
+.image_container{
+    width: 10rem;
+    height: 10rem;
+}
+.image_container >.size{
+    border-radius:50%;
+    width:100%;
+    height: 100%;
+    object-fit: cover;   
+}
 
 
-
-.shop .slick-arrow.slick-prev,
-.shop .slick-arrow.slick-next{
-    background: green;
-    width: 5rem;
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slick-prev::before,
-.slick-next::before{
-    display: none;
-}
-.slick-prev{
-    left: 0;
-    z-index: 1;
-}
-.slick-next{
-    right: 0;
-}
-.shop{
-    .slide{
-        margin: 0 1rem;
-        padding:0.5rem 1rem; 
-        border: 1px solid black;
-        text-align: center;
-        .images{
-            position: relative;
-            overflow: hidden;
-            &:hover .icons{
-                
-                transform: translateY(0);
-            }
-            .icons{
-                width: 100%;
-                position: absolute;
-                bottom: 2rem;
-                z-index: 10;
-                left: 0;
-                text-align: center;
-                transform: translateY(7rem);
-                a{
-                    height: 4.5rem;
-                    width: 4.5rem;
-                    line-height: 4.5rem;
-                    font-size: 1.7rem;
-                    color: #fff;
-                    background: black;
-                    margin: 0 0.2rem;
-                    &:hover{
-                        background: green;
-                    }
-                }
-            }
-    }
-    .content{
-        padding: 1rem 0;
-        h3{
-            font-size: 2rem;
-            color: black;
-        }
-        p{
-            padding: 0.5rem 0;
-            font-size: 2rem;
-            color: green;
-        }
-        .stars{
-            font-size: 1.2rem;
-            color: black;
-        }
-    }
-}
-}
 @media (max-width:992px) {
     #team {
     padding:3rem 0;
+    }
+    .image_container{
+        width: 15rem;
+        height: 15rem;
     }
 }

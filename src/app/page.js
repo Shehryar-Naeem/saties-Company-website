@@ -10,15 +10,17 @@ import Footer from '@/components/footer/footer'
 import Team from '@/components/team/Team'
 import HomeSlider from "@/components/slider/Slider"
 import FooterTop from '@/components/footerTop/FooterTop'
+import Profile from '@/components/profile/Profile'
 
 export default function Home() {
   return (
     <main>
-      <HomeSlider/>
+      {/* <HomeSlider/> */}
       <HomePage/>
       <About/>
       <Services/>
-      <Team/>
+      <Profile/>
+      {/* <Team/> */}
       <Blog/>
       <Clients/>
       <Contact/>

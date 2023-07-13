@@ -1,7 +1,9 @@
-.container {
-  position: relative;
-    top: 0;
-    right: 0;
+.stickypos {
+  position: sticky;
+  top: 0;
+}
+  .container {
+
     max-width: 1280px;
     margin: auto;
     display: flex;
@@ -9,7 +11,7 @@
     align-items: center;
     z-index: 2000;
     background: transparent;
-    padding: 28px 12%;
+    padding: 28px 12px;
     transition: all 0.50s ease;
 
   }

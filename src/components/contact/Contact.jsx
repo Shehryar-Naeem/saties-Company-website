@@ -10,7 +10,7 @@ export default function Contact() {
                 <div className="contact_wrapper">
                     <div className="contact_col">
                         <div className="contact_image">
-                            <img src={"contact/contact.jpg"} alt="Contact"/>
+                            <img src={"contact/contact.png"} alt="Contact"/>
                         </div>
                     </div>
                     <div className="contact_col">

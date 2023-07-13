@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import React, { useState } from "react";
+import a from "next/link";
+import React, { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 // import { signOut, useSession } from "next-auth/react";
@@ -15,52 +15,70 @@ const links = [
   {
     id: 1,
     title: "Home",
-    url: "/",
+    url: "#home",
   },
   {
     id: 2,
     title: "About",
-    url: "/",
+    url: "#about",
   },
   {
     id: 3,
     title: "Services",
-    url: "/",
+    url: "#services",
   },
   {
     id: 4,
     title: "Portfolio",
-    url: "/",
+    url: "#team",
   },
   {
     id: 5,
     title: "Contact",
-    url: "/",
+    url: "#contact",
   },
   {
     id: 6,
     title: "Marketing",
-    url: "/",
+    url: "#blog",
   },
 ];
 
 const Header = () => {
   //   const session = useSession();
   const [open,setOpen] = useState(false)
+  const [sticky, setSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   const Menu = <FontAwesomeIcon icon={faBars} />;
   const logoicon = <FontAwesomeIcon icon={faHouseMedicalCircleExclamation} />;
   return (
-    <header className={styles.container}>
-      <Link href="/" className={styles.logo}>
+    
+    <header className={`${sticky ? "" : styles.stickypos}`}>
+      <nav className={styles.container}>
+
+      <a href="/" className={styles.logo}>
         <i>{logoicon}</i>
         <span>Saties</span>
-      </Link>
+      </a>
       <ul className={open ? `${styles.navbar} ${styles.open}`:styles.navbar}>
         {links.map((link) => (
           <li>
-            <Link key={link.id} href={link.url} className={styles.link}>
+            <a key={link.id} href={link.url} className={styles.link}>
               {link.title}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
@@ -68,6 +86,8 @@ const Header = () => {
         <DarkModeToggle />
         <div className={styles.menuicon} onClick={()=>setOpen(!open)}>{Menu}</div>
       </div>
+      </nav>
+
     </header>
   );
 };

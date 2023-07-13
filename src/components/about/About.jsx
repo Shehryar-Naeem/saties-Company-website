@@ -18,7 +18,7 @@ export default function About() {
         <div class="container">
             <div className="title_headling">
                 <h3>We Provides Shortage Remarkable Ideas!</h3>
-                <p>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                <p>Saties is an information technology, consulting, and business solutions company that helps enterprises use innovation and</p>
             </div>
             <div className="about_box_wrapper">
                 <div className="about_box">
@@ -27,7 +27,7 @@ export default function About() {
                     </div>
                     <div className="about_content">
                         <h5>Development</h5>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                        <p>World-class software engineers with excellent problem-solving skills and a deep understanding of Web, cloud, and mobile technologies. We are very fast but maintain a quality focus.</p>
                     </div>
                 </div>
                 <div className="about_box">
@@ -35,8 +35,8 @@ export default function About() {
                         {faChartPieIcon}
                     </div>
                     <div className="about_content">
-                        <h5>Integration</h5>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                        <h5>Strategy</h5>
+                        <p>Experienced founders who have built and managed tier-one engineering teams, raised capital, delivered products, and sold companies.</p>
                     </div>
                 </div>
                 <div className="about_box">
@@ -44,8 +44,8 @@ export default function About() {
                         {faTruckFastIcon}
                     </div>
                     <div className="about_content">
-                        <h5>Branding</h5>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                        <h5>Innovation</h5>
+                        <p>We design transformational digital products and experiences that drive real business value and customer impact—so you can create innovative products faster and at scale.</p>
                     </div>
                 </div>
             </div>
@@ -53,18 +53,18 @@ export default function About() {
             <div className="about_box_details">
                 <div className="about_col">
                     <div className="about_image">
-                        <img src="about/about_img.jpg" alt="about" className="about_main"/>
+                        <img src="about/business_adaptation.jpg" alt="about" className="about_main"/>
                     </div>
-                    <div className="img_info__box">
+                    {/* <div className="img_info__box">
                         <h6 className="img_info__title">GET A PRICE QUOTE TODAY!</h6>
                         <p>Nemo enim ipsam oluptatem quia oluptas <br/>sit aspernatur aut odit aut fugit.</p>
                         
                         <a href="/"> <span>1-800-654-3210</span></a>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="about_col more_space">
                     <h3>We have business skills that will increase your earnings</h3>
-                    <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>We ensure the highest quality development services & solutions by using a wide range of the latest technologies.We have a certified and experienced team of developers that can provide cutting-edge solutions using this technology stack.</p>
 
                     <div className="grid_info">
                         <div className="icon">{faUserClockIcon}</div>

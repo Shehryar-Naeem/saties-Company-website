@@ -4,6 +4,7 @@ import "./team.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faArrowLeft, faArrowRight,faShoppingCart ,faEye,faShare, } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -12,9 +13,9 @@ const Team = () => {
 
     const LeftArrow = <FontAwesomeIcon icon={faArrowLeft} />
     const RightArrow = <FontAwesomeIcon icon={faArrowRight} />
-    const ShoppingCart = <FontAwesomeIcon icon={faShoppingCart} />
-    const Eye = <FontAwesomeIcon icon={faEye} />
-    const Share = <FontAwesomeIcon icon={faShare} />
+    const facebookIcon = <FontAwesomeIcon icon={faFacebookF} />
+    const linkedinIcon = <FontAwesomeIcon icon={faLinkedinIn} />
+    const githubIcon = <FontAwesomeIcon icon={faGithub} />
 
     const PrevBtn=(prop)=>{
         const {className,onClick}=prop;
@@ -91,25 +92,28 @@ const Team = () => {
         shopData.map((cur,index)=>{
           return (
             <>
-            <div className="slide">
+            <div className="slide" key={index}>
               <div key={index} className="images">
-                <img src={cur.pic} style={{width:"100%",height:"40vh"}} alt="product Images"/>
+                <div className='img_container'>
+
+                <img src={cur.pic} className="size" alt="product Images"/>
+                </div>
                 <div className="icons">
-                    <a className="fas fa-shopping-cart">{ShoppingCart}</a>
-                    <a className="fas fa-eye">{Eye}</a>
-                    <a className="fas fa-share">{Share}</a>
+                    <a className="fas fa-shopping-cart">{facebookIcon}</a>
+                    <a className="fas fa-eye">{linkedinIcon}</a>
+                    <a className="fas fa-share">{githubIcon}</a>
                 </div>
               </div>
               <div className="content">
                 <h2>{cur.title}</h2>
                 <p>{cur.price}</p>
-                <div className="stars">
+                {/* <div className="stars">
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i> 
                   <i className="fas fa-star-half-alt"></i>
-                </div>
+                </div> */}
               </div>
             </div>
             </>

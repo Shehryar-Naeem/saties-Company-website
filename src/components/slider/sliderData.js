@@ -1,22 +1,35 @@
-const SliderPic1 = "contact/contact.jpg";
-const SliderPic2 = "blog/blog.jpg"
-const SliderPic3 = "banner/banner-img.jpg"
-const SliderPic4 = "about/about_img.jpg"
+const SliderPic1 = "contact/bloackvideo.mp4";
+const SliderPic2 = "blog/slider4.mp4"
+const SliderPic3 = "blog/slider3.mp4"
+// const SliderPic4 = "blog/slider4.jpg"
+
 export const SliderData=[
     {
         id:0,
-        image:SliderPic1
+        image:SliderPic1,
+        title:"",
+        discription:""
+        
     },
     {
         id:1,
         image:SliderPic2
+        ,
+        title:"",
+        discription:""
     },
     {
         id:2,
-        image:SliderPic3
+        image:SliderPic3,
+        title:"",
+        discription:""
     },
-    {
-        id:3,
-        image:SliderPic4
-    }
+    // {
+    //     id:4,
+    //     image:SliderPic4,
+    //     title:"",
+    //     discription:""
+    // },
+   
+   
 ]

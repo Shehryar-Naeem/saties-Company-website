@@ -18,18 +18,18 @@ const HomePage=()=> {
             <div className="banner_outer">
                 <div className="col">
                     <h3 className="title">
-                        WE PROMOTE YOUR <span>BUSINESS</span>
+                        WE PROMOTE YOUR <span>BUSINESS</span> through Technology
                     </h3>
-                    <p>Nemo enim ipsam oluptatem quia reoluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eosqui ratione.</p>
-                    <div className="btn_wrapper">
+                    <p>IT consulting and software development Firm that helps clients reduce cost & time and improve their business’ operational efficiencies.</p>
+                    {/* <div className="btn_wrapper">
                         <a className="btn" href="/">Get Started</a>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="col">
                     <div className="sub_banner_image">
-                        <img src="banner/banner-img.jpg" alt="Banner_image" />
+                        <img src="banner/business-banner.jpg" alt="Banner_image" />
                     </div>
-                    <div className="banner_style_1">
+                    {/* <div className="banner_style_1">
                         {faChartIcon}
                         <h4>Bubsiness Analysis</h4>
                     </div>
@@ -40,7 +40,7 @@ const HomePage=()=> {
                     <div className="banner_style_1 banner_style_3">
                         {faChartAreaIcon}
                         <h4>Strategy</h4>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

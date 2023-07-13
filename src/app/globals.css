@@ -26,12 +26,15 @@
   /* Font Family */
   --primary-font: 'Poppins', sans-serif;
 }
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html,
 body {
   font-size: 14px;
   font-family: var(--primary-font);
-  background-color: var(--bg-color);
   overflow-x: hidden;
 
 }
