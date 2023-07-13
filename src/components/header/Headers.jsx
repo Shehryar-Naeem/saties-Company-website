@@ -47,27 +47,13 @@ const links = [
 const Header = () => {
   //   const session = useSession();
   const [open,setOpen] = useState(false)
-  const [sticky, setSticky] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  // useEffect(() => {
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+
   const Menu = <FontAwesomeIcon icon={faBars} />;
   const logoicon = <FontAwesomeIcon icon={faHouseMedicalCircleExclamation} />;
   return (
     
-    <header className={`${sticky ? "" : styles.stickypos}`}>
-      <nav className={styles.container}>
+    <header className={styles.container}>
 
       <a href="/" className={styles.logo}>
         <i>{logoicon}</i>
@@ -86,7 +72,6 @@ const Header = () => {
         <DarkModeToggle />
         <div className={styles.menuicon} onClick={()=>setOpen(!open)}>{Menu}</div>
       </div>
-      </nav>
 
     </header>
   );
