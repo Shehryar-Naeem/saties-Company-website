@@ -6,7 +6,7 @@ import Blog from '../components/blog/Blog'
 import Services from '../components/services/Services'
 import Contact from '../components/contact/Contact'
 import Clients from '../components/clients/Clients'
-import Footer from '../components/footer/footer'
+import Footer from '../components/footer/Footer'
 import Team from '../components/team/Team'
 import HomeSlider from "../components/slider/Slider"
 import FooterTop from '../components/footerTop/FooterTop'

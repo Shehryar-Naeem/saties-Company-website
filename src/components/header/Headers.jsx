@@ -69,7 +69,7 @@ const Header = () => {
         ))}
       </ul>
       <div className={styles.main}>
-        <DarkModeToggle />
+        {/* <DarkModeToggle /> */}
         <div className={styles.menuicon} onClick={()=>setOpen(!open)}>{Menu}</div>
       </div>
 
