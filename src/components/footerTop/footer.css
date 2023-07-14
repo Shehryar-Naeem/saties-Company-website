@@ -28,6 +28,7 @@
     
     
 }
+
 .follow-links{
     display: flex;
     gap: 2rem;
@@ -51,10 +52,12 @@
 .footer > .footer-container >.box >a i{
     color: green;
     padding-right: 0.5rem;
+    font-size: 1rem;
+
 }
 .footer > .footer-container >.box > a:hover{
     cursor: pointer;
-    color: green;
+
     i{
         padding-right: 2rem;
     }

@@ -1,6 +1,6 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from './page.module.css'
-import HomePage from '../components/home/Home'
+// import HomePage from '../components/home/Home'
 import About from '../components/about/About'
 import Blog from '../components/blog/Blog'
 import Services from '../components/services/Services'
@@ -8,24 +8,34 @@ import Contact from '../components/contact/Contact'
 import Clients from '../components/clients/Clients'
 import Footer from '../components/footer/Footer'
 import Team from '../components/team/Team'
-import HomeSlider from "../components/slider/Slider"
+// import HomeSlider from "../components/slider/Slider"
 import FooterTop from '../components/footerTop/FooterTop'
 import Profile from '../components/profile/Profile'
+import Hero from '@/components/herosection/Hero'
+import FrequentlyAskQuestion from '@/components/frequentlyquestion/FrequentlyAskQuestion'
 
 export default function Home() {
+  
   return (
     <main>
-      <HomeSlider/>
-      <HomePage/>
+      <Hero/>
+      {/* <HomeSlider/> */}
+      <main id="main">
+
+      </main>
+      {/* <HomePage/> */}
       <About/>
       <Services/>
       <Profile/>
       {/* <Team/> */}
       <Blog/>
       <Clients/>
+      <FrequentlyAskQuestion/>
       <Contact/>
+
       <FooterTop/>
       <Footer/>
+
       
     </main>
   )

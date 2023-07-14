@@ -6,10 +6,14 @@ const Profile = () => {
     <>
       <section id="team">
         <div className="container">
-          <div className="title_headling">
+        <div class="section-title">
+          <h2>INDUSTRIES WE SERVE</h2>
+          <p>We provide high-performing software solutions to give businesses a competitive edge.</p>
+        </div>
+          {/* <div className="title_headling">
             <h3>INDUSTRIES WE SERVE</h3>
             <p>We provide high-performing software solutions to give businesses a competitive edge.</p>
-          </div>
+          </div> */}
           <div class="wrapper">
             <div class="profile-container">
               <i class="fas fa-utensils"></i>

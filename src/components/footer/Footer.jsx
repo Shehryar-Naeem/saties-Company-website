@@ -33,11 +33,7 @@ export default function Footer() {
   return (
     <>
     
-    <section className="container">
-        <footer className="footer">
-            <p>© All Right Reserved 2023 Designed By <a href="/">Code4education</a></p> 
-        </footer>
-    </section>
+
 
     {/* Scroll To Top */}
     {

@@ -8,10 +8,20 @@
     justify-content: space-between;
     align-items: center;
     z-index: 2000;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.1);
     padding: 28px 12px;
     transition: all 0.50s ease;
 
+  }
+  .container.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    color: #000; /* Adjust the background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect if desired */
   }
   .container li{
     list-style: none;
