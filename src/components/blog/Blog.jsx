@@ -39,9 +39,9 @@ export default function Blog() {
 <section id="about" class="about">
       <div class="container">
       <div class="section-title">
-            <h2>Client</h2>
+            <h2>Why collaborate with Saties</h2>
             <p>
-            Most Satisfied Clients
+            At Saties, meeting our clients’ aspirations is our top priority. Our team is committed to delivering high-quality products and exceptional service
             </p>
           </div>
         <div class="row">
@@ -49,17 +49,17 @@ export default function Blog() {
             <img src="assets/img/about.jpg" class="img-fluid" alt=""/>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
+            <h3>WHY CHOOSE US?</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            A few good reasons.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> We’ll make you more money with customer-focused convincing techniques.</li>
+              <li><i class="bi bi-check-circle"></i> We’re chosen by professionals. We’re working for dozens of global tech companies.</li>
+              <li><i class="bi bi-check-circle"></i> Before we even start working. we think about value proposition to make your brand sky-rocket.</li>
+              <li><i class="bi bi-check-circle"></i> With working knowledge of online SEO and social media. we can take your message wherever it needs to go.</li>
+              <li><i class="bi bi-check-circle"></i> We focus on results. For us it’s all about what adds value for you and your business.</li>
             </ul>
-            <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
 

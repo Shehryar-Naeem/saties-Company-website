@@ -4,7 +4,7 @@
     padding: 5rem 0;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem ,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem ,1fr));
   }
   .profile-container {
     /* width: 20rem; */
@@ -16,16 +16,16 @@
     position: relative;
     font-size: 16px;
     border-radius: 0.5em;
-    background-color: #73B0E2;
+    background-color: #37517E;
 
     
-    border-bottom: 10px solid #37517E;
+    border-bottom: 10px solid #73B0E2;
     /* border-bottom: 10px solid #37517E; */
   }
   i {
-    color: #18f98f;
     font-size: 2.5em;
     text-align: center;
+    color: #fff;
   }
   span.num {
     color: #ffffff;

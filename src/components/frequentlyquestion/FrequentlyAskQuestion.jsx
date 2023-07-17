@@ -1,72 +1,235 @@
-import React  from 'react'
-
+"use client";
+import React, { useEffect } from "react";
+// import "bootstrap/dist/js/bootstrap.bundle"
 const FrequentlyAskQuestion = () => {
-   
+  useEffect(() => {
+    const collapseElements = document.querySelectorAll(
+      '[data-bs-toggle="collapse"]'
+    );
+    const collapseList = Array.from(collapseElements);
+
+    collapseList.forEach((element) => {
+      element.addEventListener("click", () => {
+        const target = document.querySelector(
+          element.getAttribute("data-bs-target")
+        );
+        const isExpanded = target.classList.contains("show");
+
+        // Close all other open items
+        collapseList.forEach((item) => {
+          const itemTarget = document.querySelector(
+            item.getAttribute("data-bs-target")
+          );
+          if (item !== element && itemTarget.classList.contains("show")) {
+            itemTarget.classList.remove("show");
+          }
+        });
+
+        // Toggle the clicked item
+        if (isExpanded) {
+          target.classList.remove("show");
+        } else {
+          target.classList.add("show");
+        }
+      });
+    });
+  }, []);
   return (
     <>
-          <section id="faq" class="faq section-bg">
-      <div class="container" data-aos="fade-up">
+      <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4">
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+              <div class="content px-xl-5">
+                <h3>
+                  Frequently Asked <strong>Questions</strong>
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Duis aute irure dolor in reprehenderit
+                </p>
+              </div>
 
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              <div class="accordion accordion-flush px-xl-5" id="faqlist">
+                <div
+                  class="accordion-item"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-1"
+                    >
+                      <i class="bi bi-question-circle question-icon"></i>
+                      Do you have a concrete plan for the project?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-content-1"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqlist"
+                  >
+                    <div class="accordion-body">
+                      Their plan should include: The overall goal of the project
+                      The intended audience Important features/modules, not just
+                      “sort of like X website/app” Approximate (achievable)
+                      timelines Approximate budget Understanding the importance
+                      of project management systems to help achieve timelines
+                      Who’s involved in milestone sign-offs (just them or other
+                      stakeholders?) Potential screen mockups or user stories
+                    </div>
+                  </div>
+                </div>
+                {/* <!-- # Faq item--> */}
+
+                <div
+                  class="accordion-item"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-2"
+                    >
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What are the most important features of your project to
+                      build an MVP?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-content-2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqlist"
+                  >
+                    <div class="accordion-body">
+                      Projects don’t always run to completion. The client runs
+                      out of money, loses interest in the project, decides it’s
+                      not necessary or decides to go with a ready-made product
+                      instead. These things happen.
+                    </div>
+                  </div>
+                </div>
+                {/* <!-- # Faq item--> */}
+
+                <div
+                  class="accordion-item"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-3"
+                    >
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What is your timeline for deliverables?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-content-3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqlist"
+                  >
+                    <div class="accordion-body">
+                      Once you’ve got past the first hurdle, and the client has
+                      properly fleshed out how their project should come
+                      together, you’ll need to look at deliverables. The Agile
+                      approach is best suited to freelance software development,
+                      but that doesn’t mean that milestones can’t (or shouldn’t)
+                      be set. This will involve mapping out a full timeline with
+                      the client.
+                    </div>
+                  </div>
+                </div>
+                {/* <!-- # Faq item--> */}
+
+                <div
+                  class="accordion-item"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-4"
+                    >
+                      <i class="bi bi-question-circle question-icon"></i>
+                      Let’s talk money: Are we going by milestone or hourly?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-content-4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqlist"
+                  >
+                    <div class="accordion-body">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      Getting paid is the aim of this gig, so talking about how
+                      that’s going to happen is essential. Clients may be keen
+                      to go with a milestone-based approach. Sure, that makes
+                      sense — they’re paying for what you’re delivering. This
+                      may not be an ideal choice as a dev, though. Unless the
+                      project is fairly simple, you’ve done similar ones 1,000
+                      times already, and you can accurately plot out how long
+                      each part is going to take, it’s difficult to accurately
+                      guess costs with a milestone-based approach.
+                    </div>
+                  </div>
+                </div>
+                {/* <!-- # Faq item--> */}
+
+                <div
+                  class="accordion-item"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-5"
+                    >
+                      <i class="bi bi-question-circle question-icon"></i>
+                      How long does it take to develop software with you?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-content-5"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqlist"
+                  >
+                    <div class="accordion-body">
+                    We need to know your project needs first in order to tell you the exact time that is required to develop your software. To tell you, it is possible to run a project from start to finish in a couple of weeks, but it’s also possible to run a project for several years. For a more precise answer, we suggest you contact a member of our business development team. They will be able to provide you with the most accurate estimate.
+                    </div>
+                  </div>
+                </div>
+                {/* <!-- # Faq item--> */}
+              </div>
+            </div>
+
+            <div
+              class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+              style={{ backgroundImage: `url("assets/img/about.jpg")` }}
+            >
+              &nbsp;
+            </div>
+          </div>
         </div>
-
-        <div class="faq-list">
-          <ul>
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                </p>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-        
-
-      </div>
-    </section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default FrequentlyAskQuestion
+export default FrequentlyAskQuestion;
