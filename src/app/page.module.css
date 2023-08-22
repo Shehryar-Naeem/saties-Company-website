@@ -6,6 +6,10 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.img_size{
+  width: 500px;
+
+}
 .loading{
   position: fixed;
   width: 100%;
@@ -234,3 +238,4 @@
     transform: rotate(0deg);
   }
 }
+

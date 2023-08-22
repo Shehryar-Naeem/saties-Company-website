@@ -191,7 +191,9 @@ p {
 
 
 
-
+#shadow-host-companion{
+  padding: 0;
+}
 
 /**
 * Template Name: Arsha
@@ -332,7 +334,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 120px;
 }
 
 /*--------------------------------------------------------------

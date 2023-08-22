@@ -27,7 +27,7 @@ const FooterTop = () => {
           <div class="container">
             <div class="row">
               <div class="col-lg-3 col-md-6 footer-contact">
-                <h3>Saties</h3>
+              <img src={"/logo/weiblock.png"} alt="weiblock" style={{maxHeight:"90px"}} class="img-fluid"/>
                 <p>
                   Oposite Jalalson,
                   <br />
@@ -116,7 +116,7 @@ const FooterTop = () => {
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ --> */}
-            Designed by <a href="https://bootstrapmade.com/">Saties</a>
+            Designed by <a href="https://bootstrapmade.com/">weiblock</a>
           </div>
         </div>
       </footer>
